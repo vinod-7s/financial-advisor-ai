@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://financial-ai-agent.onrender.com";
+const API = "http://127.0.0.1:8000";
 
 export const getStock = (symbol) =>
   axios.get(`${API}/stock/${symbol}`);
@@ -17,4 +17,4 @@ export const getHistory = () =>
   axios.get(`${API}/history`);
 
 export const clearHistory = () =>
-  axios.delete("http://127.0.0.1:8000/history");
+  axios.delete(`${API}/history`);
